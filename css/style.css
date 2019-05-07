@@ -1,0 +1,120 @@
+
+body {
+    background-color: #FFFFF3;
+}
+
+#container {
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Libre Baskerville', serif;
+    color: #414145;
+}
+
+#wrap {
+    min-height: calc(100vh - 140px);
+    max-width: 100%;
+}
+
+#bio {
+    display: flex;
+    flex-direction: row;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    
+    font-size: 72px;
+}
+
+.text {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.icon {
+    width: 28px;
+}
+
+#grid {
+    display: grid;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px;
+    place-content: stretch;
+    border-top: 3px solid grey;
+}
+
+#skill {
+    grid-column: 1 / 3;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightsteelblue;
+}
+
+.project {
+    text-align: center;
+    min-height: 310px;
+    width: 100%;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 80%;
+}
+
+.project #towersImg {
+    background-image: url("../images/Towers.png");
+    background-size: cover;
+
+}
+
+.project .details {
+    display: none;
+}
+
+.project:hover .details {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
+}
+
+.project:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.project:hover .title {
+    display: none;
+}
+
+button {
+    color: #414145;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
