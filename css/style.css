@@ -5,12 +5,11 @@ body {
 
 #container {
     width: 100%;
-    margin-top: 0;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Libre Baskerville', serif;
-    color: #414145;
+    color: #323232;
 }
 
 #wrap {
@@ -21,16 +20,17 @@ body {
 #bio {
     display: flex;
     flex-direction: row;
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin-top: 32.5px;
+    margin-bottom: 32.5px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
 h1 {
-    
     font-size: 72px;
+    margin-bottom: 20px;
+    color: #9400D3;
 }
 
 .text {
@@ -49,6 +49,7 @@ ul {
 
 .icon {
     width: 28px;
+    color: grey;
 }
 
 #grid {
@@ -56,11 +57,12 @@ ul {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-gap: 15px;
+    grid-gap: 30px;
     place-content: stretch;
-    border-top: 3px solid grey;
+    border-top: 3px solid black;
 }
 
 #skill {
@@ -70,51 +72,137 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: lightsteelblue;
+    background-color: #ebebeb;
+    margin-bottom: 32.5px;
 }
 
 .project {
-    text-align: center;
     min-height: 310px;
     width: 100%;
+    background-color: #ebebeb;
 }
 
-.title {
+ .backGroundImg {
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 290px;
+    min-width: 290px;
     width: 80%;
 }
 
-.project #towersImg {
+#towers {
     background-image: url("../images/Towers.png");
     background-size: cover;
+    background-position:center;   
+}
 
+#beer {
+    background-image: url("../images/Beer.png");
+    background-size: cover;
+    background-position:center;   
 }
 
 .project .details {
     display: none;
 }
 
+.project:hover .backGroundImg{
+    background-color: #969696;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover #towers {
+    background-image: none;
+}
+
+.project:hover #beer {
+    background-image: none;
+}
+
 .project:hover .details {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+#skill .details {
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.project:hover {
-    background-color: lightgoldenrodyellow;
+#skill:hover .details {
+    color: #fff;
+    background-color: #969696;
 }
 
-.project:hover .title {
-    display: none;
+h3 {
+    margin-top: 0;
 }
 
+#skill h3 {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
 button {
     color: #414145;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
+} 
+
+.website {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Poppins', sans-serif;
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    background-color: #9555af;
+  }
+
+@media (max-width: 1000px) {
+    #bio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #bio p {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding-inline-start: 0;
+        align-items: flex-start;
+    }
+
+    #grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    #skill {
+        grid-column: span 1;
+    }
+
+    .project {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
