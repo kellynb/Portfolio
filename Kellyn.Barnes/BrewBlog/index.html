@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BrewTracker Post</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+        <div class="container">
+            <div id="brewTracker">
+                    <section id="brewIntro">
+                        <div>
+                            <h2>BrewTracker</h2>
+                            <p> During the week, I currently brew beer for a production brewery in Austin, TX.  On multiple occassions, 
+                                the flow of information between employees regarding equipment malfunctions or minor logistical complications leads to delays
+                                in addressing and fixing problems.  Or, when there is an issue with the beer, diagnosing and fixing the problem because its own problem
+                                due to a lack of consistent notetacking.  In hopes of solving these issues, I am building BrewTracker to give all employees involved in 
+                                making the product access to a cloud-based app that records data for each beer and alerts all users in changes throughout each stage of a beer's lifecycle.
+                            </p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li class="navWord" id="homeText">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/kellynbarnes/" class="icons">
+                                        <img src="../images/linkedin-black.png" class="icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/kellynb" class="icons">
+                                        <img src="../images/github-black.png" class="icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                    <article id="content">
+                        <section class="brewSection">
+                            <div class="beerImg" id="beerHomePage">
+                            </div>
+                            <div class="pageDescription">
+                                <h3 class="brewTitle">Homepage</h3>
+                                <p>     As the user logins, this is the homepage. Data is being fetched from the database, displaying
+                                        the current condition of a tank. The user can see the status of each fermentation tank. The colors will be explained
+                                        later.
+                                        Also, the user can navigate to the "Brew Batch" page by clicking on the button.
+                                </p>
+                            </div>     
+                        </section>
+                        <section class="brewSection changeSection">
+                            <div class="pageDescription">
+                                <h3 class="brewTitle">Brew Batch</h3>
+                                <p>On this page, the brewer inputs values that he/she tracks
+                                    during the brew process which then
+                                    is sent to the backend database. Since the brew process can take anywhere from 6 to 8 hours, the app uses a
+                                    continuous timer to send
+                                     data every 30 seconds until the brew is done or if the brewer changes pages.
+                                </p>
+                            </div>
+                            <div class="beerImg"></div>
+                        </section>
+                        <section class="brewSection">
+                            <div class="beerImg" id="fermentationTank"></div> 
+                            <div class="pageDescription">
+                                    <h3 class="brewTitle">Fermentation Tank</h3>
+                                    <p>I'm currently working on this section; the fermentation tank.  The color of the tank represents the current stage of the beer from
+                                            fermenting, to cold conditioning, to empty. The user can click on a tank to update the status of the batch which will alert all users.
+                                    </p>
+                            </div>
+                        </section>
+                        <section id="finalInfo">
+                            <div>
+                                <h3 class="brewTitle">Future Versions</h3>
+                                <p>
+                                    As all the main functionality is added to track a brew, I will then add a section called Historic Brews.
+                                    In this section the user can pull up past batches and see all revelant metrics. Within this section, the plan is 
+                                    to have options to compare multiple batches graphically. Also, I'm implementing react redux for state management.
+                                </p>
+                            </div>
+                        </section>
+                    </article>
+            </div>  
+        </div>
+</body>
+</html>
